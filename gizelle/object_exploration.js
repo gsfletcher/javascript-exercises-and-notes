@@ -49,7 +49,7 @@ const Shirt = {
     this.style = "tank top";
   },
   tieDye: function(multiColor){
-    this.color = multiColor
+    this.color = multiColor;
   },
   changeSize: function(XS){
     this.size = XS;
@@ -59,13 +59,15 @@ const Shirt = {
 console.log("The latest shirt style: ", Shirt);
 
 // TieDye the shirt:
-Shirt.tieDye("Purple");
-console.log('This shirt is now: ', Shirt);
+Shirt.tieDye("Purple TieDye");
+console.log('This shirt is now: ', Shirt.tieDye);
 
 // CHange the style of the shirt
 Shirt.cut();
-console.log('New shirt style: ', Shirt);
+console.log('New shirt style: ', Shirt.cut);
 
 // I need a smaller shirt
-Shirt.cut();
-console.log('New shirt: ', Shirt);
+Shirt.changeSize();
+console.log('New shirt size: ', Shirt.changeSize);
+
+console.log(Shirt);
